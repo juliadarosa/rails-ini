@@ -14,16 +14,17 @@
 
   <tbody>
     <% @cities.each do |city| %>
-      <tr>
+      <p> O idioma padrão é :<%= i18n.locale %> - <%=t('hello')%></p>
         <td><%= city.description %></td>
         <td><%= city.code %>
+        <td><%= city.state.description %> </td>
       
-        <td><%= image_tag city.image, size "25x25" %></td>
+        <td><%= image_tag city.image, size: "100x50" %></td>
 
         <%# <td>img scr="<%=city.iamge %">"widht="25px" heigth="25px"></td> %>
 
         
-        <td><%= link_to 'Show', city %></td>
+        <td><%= link_to t('links.show'), city %></td>
         <td><%= link_to 'Edit', edit_city_path(city) %></td>
         <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

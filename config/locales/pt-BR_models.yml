@@ -1,0 +1,32 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+
+
+pt-BR:
+activercord:
+models: 
+  city: 
+  one: Cidade
+  other:
+  state: 
+atributes:
+  city:
+  id:
+  description:
+  code:
+  image:
+  state:
+  state_id:
+  created_at:
+  updated_at:
+state:
+acronym:
+description:
+created_at:
+  updated_at:

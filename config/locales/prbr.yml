@@ -29,12 +29,12 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
- language: "English"
-  hello: "Hello world"
-  Welcome: "Welcome"
-  city: "City"
+prbr:
+ language: "Português"
+  hello: "Ola"
+  Welcome: "Bem vindo"
+  city: "cidade"
   links: 
-    Show: "Show"
-    edit: "Edit"
-    destroy: "Destroy"
+    Show: "Listar"
+    edit: "Editar"
+    destroy: "Deletar"

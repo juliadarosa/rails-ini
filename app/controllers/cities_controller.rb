@@ -1,5 +1,6 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: %i[ show edit update destroy ]
+  before_action :set_state_options, only: %i[ create new edit update ]
 
   # GET /cities or /cities.json
   def index
@@ -58,13 +59,16 @@ class CitiesController < ApplicationController
   end
 
   private
+  def set_state_options
+    @state_options = State.all.pluck(:description, :id)
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_city
-      @city = City.find(params[:id])
+     @city = City.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def city_params
-      params.require(:city).permit(:description, :code, :image)
+      params.require(:city).permit(:description, :code, :image, :state_id)
     end
 end
